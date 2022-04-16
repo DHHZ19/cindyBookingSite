@@ -1,0 +1,134 @@
+///
+/// Threshold by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+/* Footer */
+
+	#footer {
+		text-align:center;
+
+		.contact-form {
+			margin-bottom: _size(element-margin) * 3;
+
+			ul {
+				margin-bottom: 0;
+			}
+		}
+
+		.contact-info {
+			@include vendor('display','flex');
+			@include vendor('flex-wrap','wrap');
+			@include vendor('align-items','center');
+			@include vendor('justify-content','space-between');
+			margin: 0 auto _size(element-margin) * 2 auto;
+			padding-left: 2rem;
+			width: 40rem;
+
+			.item {
+				@include vendor('display','flex');
+				@include vendor('align-items','center');
+				height: 2.75rem;
+				margin-bottom: _size(element-margin);
+				text-align: left;
+				width: 18rem;
+
+				p {
+					margin: 0;
+				}
+
+				a {
+					color: _palette(fg);
+					text-decoration: none;
+
+					&:hover {
+						color: _palette(fg-bold);
+					}
+				}
+			}
+		}
+
+		.inner {
+			max-width: 50rem;
+
+			header {
+				margin: 0 auto;
+				max-width: 75%;
+
+				>:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.icon {
+				&.alt {
+					margin: 0 _size(element-margin) 0 0;
+				}
+			}
+		}
+
+		.copyright {
+			color: _palette(fg-light);
+			margin: 0 auto _size(element-margin) * 2 auto;
+			max-width: 80rem;
+			text-align: center;
+		}
+
+		@include breakpoint('<=large') {
+			.inner {
+				max-width: calc(100% - 6rem);
+			}
+
+			.copyright {
+				max-width: calc(100% - 6rem);
+			}
+
+			.contact-form {
+				margin-bottom: _size(element-margin) * 2;
+			}
+		}
+
+		@include breakpoint('<=medium') {
+			.inner {
+				max-width: calc(100% - 5rem);
+
+				header {
+					max-width: 100%;
+				}
+			}
+
+			.copyright {
+				max-width: calc(100% - 5rem);
+				width: 100%;
+			}
+		}
+
+		@include breakpoint('<=small') {
+			.inner {
+				max-width: calc(100% - 4rem);
+
+				.icon {
+					&.alt {
+						margin: 0 (_size(element-margin) * 0.75) 0 0;
+					}
+				}
+			}
+
+			.copyright {
+				max-width: 100%;
+				margin: 0 auto _size(element-margin) auto;
+				width: 100%;
+			}
+
+			.contact-info {
+				padding-left: 0;
+				width: 100%;
+				margin: 0 auto _size(element-margin) auto;
+
+				.item {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}

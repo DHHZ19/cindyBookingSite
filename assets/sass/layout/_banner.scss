@@ -1,0 +1,168 @@
+///
+/// Threshold by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Banner */
+
+	#banner {
+		#header + & {
+			margin-top: (_size(header-height) * -1);
+		}
+
+		&.wrapper {
+			padding-bottom: 4rem;
+			padding-top: 16rem;
+		}
+
+		.inner {
+			@include vendor('display', 'flex');
+		}
+
+		.content {
+			@include vendor('transition', (
+				'opacity 0.75s ease-in-out',
+				'transform 0.75s ease-in-out'
+			));
+			padding-right: _size(element-margin);
+			width: 50%;
+
+			> :last-child {
+				margin-bottom: 0;
+			}
+
+			p {
+				font-size: 1.25rem;
+			}
+		}
+
+		.image-wrapper {
+			@include vendor('transition', (
+				'opacity 1.5s ease-in-out',
+				'transform 0.75s ease-in-out'
+			));
+			position: relative;
+			width: 50%;
+
+			.frame {
+				height: auto;
+				width: 100%;
+			}
+
+			.image {
+				left: 0;
+				margin: 0 auto;
+				position: absolute;
+				right: 0;
+				top: 1rem;
+				width: 80%;
+
+				img {
+					object-fit: cover;
+					object-position: center;
+					width: 100%;
+				}
+			}
+		}
+
+		body.is-preload & {
+			.content {
+				@include vendor('transform', 'translateX(-0.5rem)');
+				opacity: 0;
+			}
+
+			.image-wrapper {
+				@include vendor('transform', 'translateY(0.5rem)');
+				opacity: 0;
+			}
+		}
+
+		@include breakpoint('<=xlarge') {
+			&.wrapper {
+				padding-bottom: 2rem;
+				padding-top: 14rem;
+			}
+		}
+
+		@include breakpoint('<=large') {
+			&.wrapper {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 100%;
+				padding-bottom: 2.5rem;
+				padding-top: 10rem;
+				text-align: center;
+			}
+
+			ul {
+				&.actions {
+					@include vendor('justify-content', 'center');
+				}
+			}
+
+			.inner {
+				@include vendor('flex-direction', 'row');
+				@include vendor('flex-wrap', 'wrap');
+			}
+
+			.content {
+				@include vendor('order', '2');
+				padding-right: 0;
+				text-align: center;
+				width: 100%;
+			}
+
+			.image-wrapper {
+				@include vendor('order', '1');
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: _size(element-margin);
+				width: 30rem;
+				max-width: 100%;
+			}
+
+			body.is-preload & {
+				.content {
+					@include vendor('transform', 'translateY(0.5rem)');
+				}
+
+				.image-wrapper {
+					@include vendor('transform', 'translateY(-0.5rem)');
+				}
+			}
+		}
+
+		@include breakpoint('<=medium') {
+			&.wrapper {
+				padding-bottom: 1rem;
+				padding-top: 11rem;
+			}
+
+			.image-wrapper {
+				width: 40rem;
+			}
+		}
+
+		@include breakpoint('<=small') {
+			&.wrapper {
+				max-width: 100%;
+				padding-top: 10rem;
+			}
+
+			.image-wrapper {
+				width: 290px;
+				.image {
+					top: 0.75rem;
+				}
+			}
+		}
+
+		@include breakpoint('<=xsmall') {
+			.image-wrapper {
+				.image {
+					top: 0.6rem;
+				}
+			}
+		}
+	}

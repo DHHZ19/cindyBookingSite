@@ -1,0 +1,144 @@
+///
+/// Threshold by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		@include vendor('appearance', 'none');
+		@include vendor('transition', (
+			'background-color #{_duration(transition)} ease-in-out',
+			'box-shadow #{_duration(transition)} ease-in-out',
+			'color #{_duration(transition)} ease-in-out'
+		));
+		background-color: _palette(accent3);
+		border-radius: _size(border-radius);
+		border: 0;
+		box-shadow: inset 0px 0px 0px _size(border-width) _palette(accent3-alt);
+		color: _palette(fg-bold) !important;
+		cursor: pointer;
+		display: inline-block;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: _font(weight-bold);
+		height: _size(element-height);
+		line-height: _size(element-height);
+		overflow: hidden;
+		padding: 0 3.5rem 0 1rem;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+
+		&:after {
+			@include vendor('transition', (
+				'background-color #{_duration(transition)} ease-in-out',
+				'box-shadow #{_duration(transition)} ease-in-out',
+				'color #{_duration(transition)} ease-in-out'
+			));
+			background-color: _palette(accent3-alt);
+			color: _palette(accent3);
+			content: '\f061';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			width: 2.5rem;
+		}
+
+		&:hover {
+			background-color: lighten(_palette(accent3), 5);
+			box-shadow: inset 0px 0px 0px _size(border-width) lighten(_palette(accent3-alt), 5);
+
+			&:after {
+				background-color: lighten(_palette(accent3-alt), 5);
+			}
+		}
+
+		&:active {
+			background-color: _palette(accent3);
+			box-shadow: inset 0px 0px 0px _size(border-width) _palette(accent3-alt);
+
+			&:after {
+				background: _palette(accent3-alt);
+				color: _palette(accent3);
+			}
+		}
+
+		&.primary {
+			background-color: _palette(accent1);
+			box-shadow: none;
+			color: _palette(fg-bold) !important;
+
+			&:after {
+				background: _palette(accent1-alt);
+				color: _palette(accent1-dark);
+			}
+
+			&:hover {
+				background-color: _palette(accent1-hover);
+
+				&:after {
+					background: lighten(_palette(accent1-alt), 5);
+				}
+			}
+
+			&:active {
+				background-color: _palette(accent1);
+
+				&:after {
+					background: _palette(accent1-alt);
+					color: _palette(accent1-dark);
+				}
+			}
+		}
+
+		&.small {
+			font-size: 0.8rem;
+			height: _size(element-height) * 0.75;
+			line-height: _size(element-height) * 0.75;
+			padding: 0 3.75rem 0 1.25rem;
+
+			&:after {
+				width: 2.5rem;
+			}
+		}
+
+		&.large {
+			font-size: 1.20rem;
+			height: _size(element-height) * 1.20;
+			line-height: _size(element-height) * 1.20;
+			padding: 0 4.75rem 0 1.5rem;
+
+			&:after {
+				width: 3.25rem;
+			}
+		}
+
+		&.wide {
+			min-width: 13rem;
+		}
+
+		&.icon {
+			&:before {
+				margin-right: 0.5rem;
+			}
+		}
+
+		&.fit {
+			width: 100%;
+		}
+
+		&.disabled,
+		&:disabled {
+			@include vendor('pointer-events', 'none');
+			opacity: 0.25;
+		}
+	}

@@ -1,0 +1,57 @@
+///
+/// Threshold by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Wrapper */
+
+	.wrapper {
+		@include padding(6rem, 0);
+		position: relative;
+		z-index: _misc(z-index-base);
+
+		.inner {
+			position: relative;
+			z-index: _misc(z-index-base) + 2;
+		}
+
+		&.style1 {
+			background: _palette(bg-dark);
+			position: relative;
+
+			&.top {
+				&:before {
+					background: _palette(bg);
+					content: '';
+					height: 19.5rem;
+					left: 0;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					z-index: _misc(z-index-base) + 1;
+				}
+			}
+
+			&.bottom {
+				&:before {
+					background: _palette(bg);
+					bottom: 0;
+					content: '';
+					height: 15rem;
+					left: 0;
+					position: absolute;
+					width: 100%;
+					z-index: _misc(z-index-base) + 1;
+				}
+			}
+		}
+
+		@include breakpoint('<=large') {
+			@include padding(3rem, 0);
+		}
+
+		@include breakpoint('<=small') {
+			@include padding(2rem, 0);
+		}
+	}

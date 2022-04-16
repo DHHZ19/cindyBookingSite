@@ -1,0 +1,77 @@
+///
+/// Threshold by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Icon */
+
+	.icon {
+		@include icon;
+		border-bottom: none;
+		position: relative;
+
+		> .label {
+			display: none;
+		}
+
+		&.solid {
+			&:before {
+				font-weight: 900;
+			}
+		}
+
+		&.brands {
+			&:before {
+				font-family: 'Font Awesome 5 Brands';
+			}
+		}
+
+		&.alt {
+			@include vendor('flex-grow', '0');
+			@include vendor('flex-shrink', '0');
+			display: block;
+			height: 2.75rem;
+			line-height: 2.75rem;
+			margin: 0 auto _size(element-margin) auto;
+			text-align: center;
+			width: 2.75rem;
+
+			&:before {
+				color: _palette(accent1);
+				font-size: 1.15rem;
+				position: relative;
+				top: 0.05rem;
+			}
+
+			&:after {
+				@include vendor('transform', 'rotate(45deg)');
+				border-radius: _size(border-radius) * 2;
+				border: _size(border-width) solid _palette(border);
+				content: '';
+				display: block;
+				height: 2.75rem;
+				left: 50%;
+				margin: -1.375rem 0 0 -1.375rem;
+				position: absolute;
+				top: 50%;
+				width: 2.75rem;
+			}
+
+			&.major {
+				height: 5rem;
+				line-height: 5rem;
+				width: 5rem;
+
+				&:before {
+					font-size: 1.90rem;
+				}
+
+				&:after {
+					height: 5rem;
+					width: 5rem;
+					margin: -2.5rem 0 0 -2.5rem;
+				}
+			}
+		}
+	}

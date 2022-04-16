@@ -1,0 +1,73 @@
+///
+/// Threshold by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Features */
+
+	.features {
+		@include vendor('display','flex');
+		@include vendor('flex-wrap','wrap');
+		@include vendor('align-items','flex-start');
+		@include vendor('justify-content','center');
+		margin: 0 auto;
+
+		.feature {
+			margin-bottom: _size(element-margin) * 2;
+			padding: 0 _size(element-margin);
+			text-align: center;
+			width: 33%;
+
+			.icon {
+				&:before {
+					line-height: inherit;
+				}
+			}
+
+			&:nth-last-child(-n+3) {
+				margin-bottom: _size(element-margin);
+			}
+
+			>:last-child {
+				margin-bottom:0;
+			}
+
+			.pennant {
+				margin-bottom: _size(element-margin);
+			}
+		}
+
+		@include breakpoint('<=large') {
+			.feature {
+				margin-bottom: _size(element-margin) * 1.5;
+				padding: 0 2rem;
+			}
+		}
+
+		@include breakpoint('<=medium') {
+			.feature {
+				width: 50%;
+
+				&:nth-last-child(-n+2) {
+					margin-bottom: _size(element-margin);
+				}
+			}
+		}
+
+		@include breakpoint('<=small') {
+			.feature {
+				margin-bottom: _size(element-margin) * 1.5;
+				padding: 0;
+				width: 100%;
+
+				&:last-child {
+					margin-bottom: _size(element-margin)!important;
+				}
+
+				&:nth-last-child(-n+2) {
+					margin-bottom: _size(element-margin) * 1.5;
+				}
+			}
+		}
+	}

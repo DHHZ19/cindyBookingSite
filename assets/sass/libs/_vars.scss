@@ -1,0 +1,55 @@
+///
+/// Threshold by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+// Misc.
+	$misc: (
+		z-index-base:		10000
+	);
+
+// Duration.
+	$duration: (
+		menu:				0.5s,
+		transition:			0.2s
+	);
+
+// Size.
+	$size: (
+		border-radius:		7px,
+		border-width:		3px,
+		element-height:		3rem,
+		element-margin:		2.75rem,
+		container-width:	80rem,
+		header-height:		6rem,
+		menu-width:			20rem
+	);
+
+// Font.
+	$font: (
+		family:				('Source Sans Pro', Arial, Helvetica, sans-serif),
+		family-fixed:		('Courier New', monospace),
+		weight:				300,
+		weight-bold:		700
+	);
+
+// Palette.
+	$palette: (
+		bg:					#24242a,
+		bg-dark:			#1f1f24,
+		bg-alt:				#2e2e35,
+		fg:					transparentize(#ffffff,0.5),
+		fg-bold:			#ffffff,
+		fg-light:			transparentize(#ffffff,0.5),
+		border:				transparentize(#6e6e7a,0.5),
+		border-bg:			transparent,
+
+		accent1:			#d54857,
+		accent1-hover:		saturate(lighten(#d54857, 8), 8),
+		accent1-alt:		desaturate(darken(#d54857, 5), 8),
+		accent1-dark:		saturate(darken(#d54857, 18), 3),
+		accent2:			#2eaeff,
+		accent3:			#2e2e35,
+		accent3-alt:		#3e3e47
+	);
