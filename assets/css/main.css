@@ -258,8 +258,7 @@ input, select, textarea {
 
 		h1, h2, h3, h4, h5, p {
 			margin: 0 0 2rem 0;
-			width: 80%;
-			margin-left: 15%;
+			text-align: center;
 		}
 
 	}
@@ -1975,7 +1974,7 @@ input, select, textarea {
 			button.primary:after,
 			.button.primary:after {
 				background: rgb(218	173	181	);
-				color: hotpink;
+				color: whitesmoke;
 			}
 
 			input[type="submit"].primary:hover,
@@ -3277,7 +3276,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #2e2e35;
+		background: rgb(253	241	242)	;
 		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.25);
 		color: rgba(255, 255, 255, 0.5);
 		cursor: default;
@@ -3554,7 +3553,26 @@ input, select, textarea {
 		width: 20em;
 		z-index: 10002;
 	}
-
+	
+		 .lis   {
+			display:flex;
+			flex-direction: column;
+			align-items: center;
+		} 
+		.lis ul {
+			display:flex;
+			flex-direction: column;
+			align-items: center;
+			list-style-type: none;
+		} 
+	
+		.lis ul	li::before {
+            /* Unicode for a bullet */
+            content: "\2661";
+            /* Styles for Indentation*/
+            color: balck;
+        }
+	
 		#navPanel nav {
 			padding: 3em 2em;
 		}
