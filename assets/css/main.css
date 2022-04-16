@@ -233,6 +233,9 @@ input, select, textarea {
 	}
 
 	@media screen and (max-width: 980px) {
+		
+
+
 
 		h3 {
 			font-size: 1.5rem;
@@ -2854,6 +2857,9 @@ input, select, textarea {
 		.wrapper.style1 {
 			background: #ede1e8;
 			position: relative;
+		}
+		.wrapper.style1 iframe{
+			margin-left: 11%;
 		}
 		.wrapper.styleAbout{
 			height: 115vh;
