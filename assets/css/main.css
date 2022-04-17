@@ -260,10 +260,14 @@ input, select, textarea {
 		h3 {
 			font-size: 1.25rem;
 		}
-
+		
 		h1, h2, h3, h4, h5, p {
 			margin: 0 0 2rem 0;
 			text-align: center;
+		}
+		p.fixedHeight{
+	
+			font-size: 1.1rem;
 		}
 
 	}
@@ -3594,6 +3598,7 @@ input, select, textarea {
 			list-style-type: none;
 			display: inline;
 		} 
+		
 		#navPanel nav {
 			padding: 3em 2em;
 		}
