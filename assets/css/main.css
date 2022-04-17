@@ -348,6 +348,7 @@ input, select, textarea {
 	size: 30%;
 }
 .lis ul li:before{
+	margin-right: 2%;
 	content: '\2665';
 	color: pink;
 }
