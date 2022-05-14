@@ -340,7 +340,7 @@ input, select, textarea {
 .lis ul li:last-of-type{
 	margin-top: 9%;
 	font-size: 1rem;
-	margin-left: 30%;
+	margin-left: 23%;
 	font-weight: bolder;
 }
 .lis::first-letter{
