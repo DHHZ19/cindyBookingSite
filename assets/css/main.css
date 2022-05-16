@@ -189,7 +189,7 @@ input, select, textarea {
 		color: black;
 		font-weight: 700;
 		line-height: 1.5;
-		margin: 0 0 2.0625rem 0;
+		/* margin: 0 0 2.0625rem 0; */
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -262,7 +262,6 @@ input, select, textarea {
 		}
 		
 		h1, h2, h3, h4, h5, p {
-			margin: 0 0 2rem 0;
 			text-align: center;
 		}
 		p.fixedHeight{
