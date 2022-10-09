@@ -182,6 +182,7 @@ input, select, textarea {
 	}
 
 	p {
+		text-align: left;
 		margin: 0 0 2.75rem 0;
 	}
 
@@ -261,12 +262,12 @@ input, select, textarea {
 			font-size: 1.25rem;
 		}
 		
-		h1, h2, h3, h4, h5, p {
+		h1, h2, h3, h4, h5 {
 			text-align: center;
 		}
-		p.fixedHeight{
-	
-			font-size: 1.1rem;
+		
+		p, p.fixedHeight{
+			text-align: left;
 		}
 
 	}
@@ -2008,7 +2009,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: rgb(218	173	181	);
+				background-color: rgb(219, 7, 61);
 			}
 
 				input[type="submit"].primary:hover:after,
@@ -2016,7 +2017,7 @@ input, select, textarea {
 				input[type="button"].primary:hover:after,
 				button.primary:hover:after,
 				.button.primary:hover:after {
-					background: whitesmoke;
+					background:rgb(219, 7, 61);
 				}
 
 			input[type="submit"].primary:active,
@@ -2062,6 +2063,7 @@ input, select, textarea {
 		.button.large {
 			font-size: 1.20rem;
 			height: 3.6rem;
+			margin-top: 1.1rem;	
 			line-height: 3.6rem;
 			padding: 0 4.75rem 0 1.5rem;
 		}
@@ -3758,7 +3760,7 @@ input, select, textarea {
 
 		#banner .image-wrapper .frame {
 			height: auto;
-			width: 100%;
+			width: 75%;
 		}
 
 		#banner .image-wrapper .image {
