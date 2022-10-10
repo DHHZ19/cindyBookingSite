@@ -67,6 +67,7 @@
 			</div>
 
 		<!-- Scripts -->
+			<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -75,6 +76,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+			const jsConfetti = new JSConfetti()
+			addEventListener('load', (event) => {
+				jsConfetti.addConfetti({
+   				emojis: ['💗'],
+			})
+			});
+			</script>
 	</body>
 </html>

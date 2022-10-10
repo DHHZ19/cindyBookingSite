@@ -33,13 +33,12 @@
 						<h1>Welcome valued customer</h1>
 						<h2>Click for beautiful nails</h2>
 						<ul class="actions">
-							<li><a href="services.html" class="button large primary scrolly">Book Now</a></li>
+							<li><a href="#" class="button large primary scrolly" id="confe">Book Now</a></li>
 						</ul>
 					</div>
 					<div class="image-wrapper">
 						<img src="images/CindyNailsmainLogo.png" class="frame" alt="CindyNailsmainLogo"/>
 						<div class="image">
-						
 						</div>
 					</div>
 				</div>
@@ -109,7 +108,7 @@
 					</p> -->
 				</div>
 			</div>
-
+			<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 		<!-- Scripts -->
 		<script type="text/javascript">
 			/* curator-feed-default-feed-layout */
@@ -118,7 +117,17 @@
 			i.src="https://cdn.curator.io/published/a7e920c3-a7c7-473a-8a86-24d28089d8d8.js";
 			e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
 			})();
+
+			const jsConfetti = new JSConfetti()
+			const canvas = document.getElementById('confe')
+			canvas.addEventListener('click', (e) => {
+				jsConfetti.addConfetti({
+   				emojis: ['💗'],
+			})	
+			})
+			
 			</script>
+			
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
