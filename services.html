@@ -79,7 +79,7 @@
         			const observer = new IntersectionObserver(callback, {
             		root: null,        // intersect with viewport
             		rootMargin: '0px', // no margin when computing intersections
-           			 threshold:  .2,   // execute callback when every pixel is visible
+           			 threshold:  .3,   // execute callback when every pixel is visible
        				 })
 						function callback(entries) {
 						for (const entry of entries) {
@@ -91,7 +91,7 @@
 							}
             			}
       			   }
-        observer.observe(container)
+        		   observer.observe(container)
 			</script>
 	</body>
 </html>
