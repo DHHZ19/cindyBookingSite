@@ -73,25 +73,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				const jsConfetti = new JSConfetti()
-				   const container = document.querySelector('.viewd')
-        			const observer = new IntersectionObserver(callback, {
-            		root: null,        // intersect with viewport
-            		rootMargin: '0px', // no margin when computing intersections
-           			 threshold:  .3,   // execute callback when every pixel is visible
-       				 })
-						function callback(entries) {
-						for (const entry of entries) {
-							if (entry.isIntersecting) {
-							console.log("i am also fired on load")
-							jsConfetti.addConfetti({
-   							emojis: ['💗'],
-							})
-							}
-            			}
-      			   }
-        		   observer.observe(container)
-			</script>
 	</body>
 </html>
